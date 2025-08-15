@@ -1,0 +1,257 @@
+/* 
+Name: Naomi Kassaye
+I created a  girl animation that rides the bike across the screen using translateX and rotateY  to simulate a bike ride and turning 
+around and i also created falling leaves animation using translateX and rotate to demonstrate wind and spin effect.
+ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.bg {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events:none;
+
+}
+
+.trees {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events:none;
+}
+
+.girl {
+    position: absolute;
+    animation: girl 9s linear infinite;
+
+}
+
+.login {
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(143, 124, 124, 0.208);
+    backdrop-filter: blur(10px);
+    width: 450px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    border: .5px solid rgba(255, 255, 255, 0.56);
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.097);
+}
+
+.login div {
+    width: 100%;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    color: #90281F;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    color: #90281F;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.inputBox input::placeholder {
+    color: #90281F;
+}
+
+#btn {
+    background-color: #90281F;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#btn:hover {
+    opacity: 0.8;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group a {
+    color: #90281F;
+}
+
+.forget {
+    text-decoration: none;
+}
+
+.leaves {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events:none;
+}
+
+.set {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events:none;
+}
+
+.set div {
+    display: block;
+    position: absolute;
+    pointer-events:none;
+
+}
+
+.set div:nth-child(1) {
+    left: 15%;
+    z-index: 100;
+    animation: leaf 8s linear infinite;
+    animation-delay:0s;
+}
+
+.set div:nth-child(2) {
+    left: 30%;
+    z-index: 100;
+    animation: leaf 7s linear infinite;
+    animation-delay:1s;
+}
+
+.set div:nth-child(3) {
+    left: 40%;
+    z-index: 100;
+    animation: leaf 6s linear infinite;
+}
+
+.set div:nth-child(4) {
+    left: 50%;
+    z-index: 100;
+    animation: leaf 5s linear infinite;
+    animation-delay:2s;
+}
+
+.set div:nth-child(5) {
+    left: 60%;
+    z-index: 100;
+    animation: leaf 4s linear infinite;
+}
+
+.set div:nth-child(6) {
+    left: 75%;
+    z-index: 100;
+    animation: leaf 3s linear infinite;
+    animation-delay:3s;
+}
+
+.set div:nth-child(7) {
+    left: 85%;
+    z-index: 100;
+    animation: leaf 9s linear infinite;
+}
+
+.set div:nth-child(8) {
+    left: 90%;
+    z-index: 100;
+    animation: leaf 10s linear infinite;
+}
+
+@keyframes girl {
+    0% {
+        transform: translateX(calc(100% + 100vw)) scale(0.7);;
+    }
+
+    50% {
+        transform: translateX(calc(-100% - 100vw)) scale(0.7) ;
+    }
+
+    50.0000001% {
+        transform: translateX(calc(-100% - 100vw)) rotateY(180deg) scale(0.7);
+    }
+
+    100% {
+        transform: translateX(calc(100% + 100vw)) rotateY(180deg) scale(0.7);
+    }
+}
+
+@keyframes leaf {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(10px) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(-10px) rotate(45deg);
+    }
+
+    30% {
+        transform: translateX(10px) rotate(90deg);
+    }
+
+    40% {
+        transform: translateX(-10px) rotate(135deg);
+    }
+
+    60% {
+        transform: translateX(10px) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(-10px) rotate(225deg);
+    }
+
+
+    80% {
+        transform: translateX(10px) rotate(270deg);
+    }
+
+    100% {
+        opacity: 0.8;
+        top: 100%;
+        transform: translateX(-10px) rotate(360deg);
+    }
+
+
+}
