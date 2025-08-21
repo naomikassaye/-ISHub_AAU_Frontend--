@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #1E293B;
+  background-color: #F8FAFC;
+  scroll-behavior: smooth;
+}
+
+.App * {
+  box-sizing: border-box;
+}
+
+.App a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.App a:hover {
+  color: #1E40AF;
+}
+
+.App button {
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .App {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    font-size: 0.9rem;
+  }
+}

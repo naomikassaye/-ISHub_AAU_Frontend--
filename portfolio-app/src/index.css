@@ -1,0 +1,244 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222831;
+  color: #EEEEEE;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #393E46;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.nav .logo {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #00ADB5;
+  text-decoration: none;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: #EEEEEE;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-list li a:hover {
+  background-color: #00ADB5;
+  color: #222831;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#home {
+  height: 75vh;
+  background: linear-gradient(135deg, #393E46 0%, #222831 100%);
+  border-radius: 20px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0,173,181,0.2);
+  padding: 40px;
+}
+
+#home h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #00ADB5;
+}
+
+#home p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #EEEEEE;
+  margin-bottom: 20px;
+}
+
+section .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: #00ADB5;
+  color: #222831;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+section .btn:hover {
+  background-color: #EEEEEE;
+  color: #00ADB5;
+  transform: scale(1.05) translateY(-2px);
+}
+
+#about,
+#contact {
+  width: 90%;
+  max-width: 800px;
+  padding: 60px 40px;
+  margin: 40px auto;
+  background-color: #393E46;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,173,181,0.1);
+  text-align: center;
+}
+
+#about h2,
+#contact h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ADB5;
+}
+
+#about p,
+#contact p {
+  font-size: 1.15rem;
+  color: #EEEEEE;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#testimonial {
+  background: linear-gradient(135deg, #222831 0%, #393E46 100%);
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: #393E46;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 350px;
+  box-shadow: 0 12px 28px rgba(0,173,181,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.07);
+  box-shadow: 0 16px 36px rgba(0,173,181,0.2);
+}
+
+.testimonial h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #00ADB5;
+}
+
+.testimonial p {
+  font-weight: 500;
+  color: #EEEEEE;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,173,181,0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #222831;
+  color: #EEEEEE;
+}
+
+#contact form button {
+  background-color: #00ADB5;
+  color: #222831;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact form button:hover {
+  background-color: #EEEEEE;
+  color: #00ADB5;
+  transform: scale(1.05) translateY(-2px);
+}
+
+footer {
+  background-color: #222831;
+  padding: 30px;
+  color: #EEEEEE;
+  text-align: center;
+  border-top: 1px solid rgba(0,173,181,0.2);
+}
+
+footer a {
+  color: #00ADB5;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #EEEEEE;
+}
+
+@media (max-width: 900px) {
+  #home h1 { font-size: 2.5rem; }
+  #home p { font-size: 1.25rem; }
+  #about h2, #contact h2 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .nav { flex-direction: column; gap: 15px; padding: 15px 20px; }
+  .nav-list { flex-direction: column; gap: 15px; }
+  #home h1 { font-size: 2rem; }
+  #home p { font-size: 1.1rem; }
+  #about, #contact, .testimonial { padding: 30px 20px; width: 90%; max-width: 100%; }
+  #about h2, #contact h2 { font-size: 1.8rem; }
+}
